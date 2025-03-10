@@ -23,7 +23,7 @@
 			position: relative;
 			background: black;
 			color: #ffffff;
-			padding: 15px;
+			padding: 15px; 
 			border-radius: 8px;
 			font-family: "Courier New", monospace;
 			overflow: auto;
@@ -219,9 +219,10 @@
 								<div class="code-container">
 									<button class="copy-btn" onclick="copyToClipboard()">Copy</button>
 									<pre><code id="code-snippet">
-										SELECT * FROM orders WHERE status = 1 AND user_id = 23;
+SELECT * FROM orders WHERE status = 1 AND user_id = 23;
 									</code></pre>
 								</div>
+								<br>
 
 
 								<p>This conversion ensures seamless interaction between natural language input and
@@ -235,18 +236,20 @@
 								<div class="code-container">
 									<button class="copy-btn" onclick="copyToClipboard()">Copy</button>
 									<pre><code id="code-snippet">
-								{
-									"orders": { 
-										"columns": ["id", "user_id", "upazila_id", "status", "remarks", "created_at"],
-										"relations": {
-											"user": {"type": "belongsTo", "model": "users", "key": "user_id"}
-										}
-									},
-									"users": {
-										"columns": ["id", "name", "email", "officeid"]
-									}
-								}</code></pre>
+{
+	"orders": { 
+		"columns": ["id", "user_id", "upazila_id", "status", "remarks", "created_at"],
+		"relations": {
+			"user": {"type": "belongsTo", "model": "users", "key": "user_id"}
+		}
+	},
+	"users": {
+		"columns": ["id", "name", "email", "officeid"]
+	}
+}
+							</code></pre>
 								</div>
+								<br>
 								<p>This schema acts as a blueprint, guiding GPT-4 to understand table relationships and
 									data structures while generating optimized queries.
 								</p>
